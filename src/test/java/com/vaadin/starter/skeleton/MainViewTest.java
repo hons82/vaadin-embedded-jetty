@@ -59,12 +59,12 @@ public class MainViewTest {
         // The root route should be set directly in the UI; let's check whether it is so.
         // This demoes the direct access to the UI and its children and grand-children,
         // which encompasses all visible Vaadin components.
-        MainView main = (MainView) UI.getCurrent().getChildren().findFirst().get();
+        FirstView main = (FirstView) UI.getCurrent().getChildren().findFirst().get();
 
         // However when using this kind of low-level lookups, the code quickly gets
         // pretty complicated. Let's use the _get() function instead,
         // which will walk the UI tree for us.
-        _assertOne(MainView.class);
+        _assertOne(FirstView.class);
     }
 
     @Test
